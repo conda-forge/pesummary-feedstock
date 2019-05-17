@@ -39,12 +39,12 @@ test:
     - pesummary
     - pesummary.gw
     - pesummary.gw.file
-    - pesummary.gw.plot
+    - pesummary.gw.plots
     - pesummary.core
     - pesummary.core.css
     - pesummary.core.js
     - pesummary.core.file
-    - pesummary.core.plot
+    - pesummary.core.plots
     - pesummary.utils
     - pesummary.core.webpage
   commands:
