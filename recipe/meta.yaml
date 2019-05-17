@@ -33,7 +33,6 @@ requirements:
     - python-lal
     - python-lalsimulation
     - scipy
-    - configparser
 
 test:
   imports:
