@@ -33,18 +33,23 @@ requirements:
     - python-lal
     - python-lalsimulation
     - scipy
+    - configparser
 
 test:
   imports:
     - pesummary
-    - pesummary.css
-    - pesummary.js
-    - pesummary.one_format
-    - pesummary.plot
+    - pesummary.gw
+    - pesummary.gw.file
+    - pesummary.gw.plot
+    - pesummary.core
+    - pesummary.core.css
+    - pesummary.core.js
+    - pesummary.core.file
+    - pesummary.core.plot
     - pesummary.utils
-    - pesummary.webpage
+    - pesummary.core.webpage
   commands:
-    - summarypages.py --help
+    - summarypages --help
 
 about:
   home: https://git.ligo.org/charlie.hoy/pesummary
