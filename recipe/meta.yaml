@@ -39,12 +39,12 @@ test:
     - pesummary
     - pesummary.css
     - pesummary.js
-    - pesummary.one_format
+    - pesummary.file
     - pesummary.plot
     - pesummary.utils
     - pesummary.webpage
   commands:
-    - summarypages.py --help
+    - summarypages --help
 
 about:
   home: https://git.ligo.org/charlie.hoy/pesummary
