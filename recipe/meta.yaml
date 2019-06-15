@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f881fe84c0ffe13bcbefd985a73370128070b953ed8db6abd2b75752836709c6
+  sha256: 50ba2db4a6a554b03766a946131854a94a6f090b4451bfe312142154012b99cc
 
 build:
   number: 0
@@ -33,6 +33,7 @@ requirements:
     - python-lal
     - python-lalsimulation
     - scipy
+    - gwpy
 
 test:
   imports:
