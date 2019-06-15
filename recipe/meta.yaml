@@ -33,6 +33,7 @@ requirements:
     - python-lal
     - python-lalsimulation
     - scipy
+    - gwpy
 
 test:
   imports:
