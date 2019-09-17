@@ -13,6 +13,16 @@ build:
   number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  entry_points:
+    - summaryconvert = pesummary.gw.file.one_format:main
+    - summarypages = cli.summarypages:main
+    - summaryplots = cli.summaryplots:main
+    - summarypublication = cli.summarypublication:main
+    - summaryclassification = cli.summaryclassification:main
+    - summaryclean = cli.summaryclean:main
+    - summaryreview = cli.summaryreview:main
+    - summarycombine = cli.summarycombine:main
+    - summarycombine_metafiles = cli.summarycombine_metafiles:main
 
 requirements:
   host:
@@ -23,6 +33,7 @@ requirements:
     - astropy
     - corner
     - deepdish
+    - gwpy
     - h5py
     - lscsoft-glue
     - matplotlib-base
@@ -33,23 +44,34 @@ requirements:
     - python-lal
     - python-lalsimulation
     - scipy
-    - gwpy
+    - seaborn
+    - statsmodels
 
 test:
   imports:
     - pesummary
-    - pesummary.gw
-    - pesummary.gw.file
-    - pesummary.gw.plots
-    - pesummary.core
     - pesummary.core.css
+    - pesummary.core.file
+    - pesummary.core.file.formats
     - pesummary.core.js
     - pesummary.core.file
     - pesummary.core.plots
-    - pesummary.utils
     - pesummary.core.webpage
+    - pesummary.gw
+    - pesummary.gw.file
+    - pesummary.gw.file.formats
+    - pesummary.gw.pepredicates
+    - pesummary.gw.plots
+    - pesummary.utils
   commands:
     - summarypages --help
+    - summaryplots --help
+    - summarypublication --help
+    - summaryclassification --help
+    - summaryclean --help
+    - summaryreview --help
+    - summarycombine --help
+    - summarycombine_metafiles --help
 
 about:
   home: https://git.ligo.org/charlie.hoy/pesummary
