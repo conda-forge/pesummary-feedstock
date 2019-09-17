@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,12 +7,24 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 50ba2db4a6a554b03766a946131854a94a6f090b4451bfe312142154012b99cc
+  sha256: b2dad65438eacb914e3fabb80b3f41ac9048fa1880026379311cc7fff98e8de4
+  patches:
+    - version.patch
 
 build:
   number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  entry_points:
+    - summaryconvert = pesummary.gw.file.one_format:main
+    - summarypages = cli.summarypages:main
+    - summaryplots = cli.summaryplots:main
+    - summarypublication = cli.summarypublication:main
+    - summaryclassification = cli.summaryclassification:main
+    - summaryclean = cli.summaryclean:main
+    - summaryreview = cli.summaryreview:main
+    - summarycombine = cli.summarycombine:main
+    - summarycombine_metafiles = cli.summarycombine_metafiles:main
 
 requirements:
   host:
@@ -23,6 +35,7 @@ requirements:
     - astropy
     - corner
     - deepdish
+    - gwpy
     - h5py
     - lscsoft-glue
     - matplotlib-base
@@ -33,23 +46,34 @@ requirements:
     - python-lal
     - python-lalsimulation
     - scipy
-    - gwpy
+    - seaborn
+    - statsmodels
 
 test:
   imports:
     - pesummary
-    - pesummary.gw
-    - pesummary.gw.file
-    - pesummary.gw.plots
-    - pesummary.core
     - pesummary.core.css
+    - pesummary.core.file
+    - pesummary.core.file.formats
     - pesummary.core.js
     - pesummary.core.file
     - pesummary.core.plots
-    - pesummary.utils
     - pesummary.core.webpage
+    - pesummary.gw
+    - pesummary.gw.file
+    - pesummary.gw.file.formats
+    - pesummary.gw.pepredicates
+    - pesummary.gw.plots
+    - pesummary.utils
   commands:
     - summarypages --help
+    - summaryplots --help
+    - summarypublication --help
+    - summaryclassification --help
+    - summaryclean --help
+    - summaryreview --help
+    - summarycombine --help
+    - summarycombine_metafiles --help
 
 about:
   home: https://git.ligo.org/charlie.hoy/pesummary
