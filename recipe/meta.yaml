@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: f8f5e9ef0d71580bc26981f3744d7f5062b6cbec17729e0275359ddf9ebda2f0
-  patches:
-    - version.patch
 
 build:
   number: 0
@@ -17,14 +15,14 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
   entry_points:
     - summaryconvert = pesummary.gw.file.one_format:main
-    - summarypages = cli.summarypages:main
-    - summaryplots = cli.summaryplots:main
-    - summarypublication = cli.summarypublication:main
-    - summaryclassification = cli.summaryclassification:main
-    - summaryclean = cli.summaryclean:main
-    - summaryreview = cli.summaryreview:main
-    - summarycombine = cli.summarycombine:main
-    - summarycombine_metafiles = cli.summarycombine_metafiles:main
+    - summarypages = pesummary.cli.summarypages:main
+    - summaryplots = pesummary.cli.summaryplots:main
+    - summarypublication = pesummary.cli.summarypublication:main
+    - summaryclassification = pesummary.cli.summaryclassification:main
+    - summaryclean = pesummary.cli.summaryclean:main
+    - summaryreview = pesummary.cli.summaryreview:main
+    - summarycombine = pesummary.cli.summarycombine:main
+    - summarycombine_metafiles = pesummary.cli.summarycombine_metafiles:main
 
 requirements:
   host:
@@ -48,6 +46,7 @@ requirements:
     - scipy
     - seaborn
     - statsmodels
+    - pepredicates
 
 test:
   imports:
@@ -84,7 +83,7 @@ about:
   summary: Python package to produce summary pages for Parameter estimation codes
   description: |
     This package helps the user to generate summary webpages to
-    visualise the output from both LALInference and Bilby.
+    visualise the output from any parameter estimation code
 
 extra:
   recipe-maintainers:
