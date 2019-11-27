@@ -47,10 +47,12 @@ requirements:
     - seaborn
     - statsmodels
     - pepredicates
+    - plotly
 
 test:
   imports:
     - pesummary
+    - pesummary.conf
     - pesummary.core.css
     - pesummary.core.file
     - pesummary.core.file.formats
@@ -73,10 +75,12 @@ test:
     - summaryreview --help
     - summarycombine --help
     - summarycombine_metafiles --help
+    - summaryversion --help
+    - summarydetchar --help
 
 about:
-  home: https://git.ligo.org/charlie.hoy/pesummary
-  doc_url: https://docs.ligo.org/charlie.hoy/pesummary/
+  home: https://git.ligo.org/lscsoft/pesummary
+  doc_url: https://lscsoft.docs.ligo.org/pesummary/
   license: MIT
   license_family: MIT
   license_file: LICENSE
