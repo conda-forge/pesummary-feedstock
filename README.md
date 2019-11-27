@@ -10,7 +10,7 @@ Feedstock license: BSD 3-Clause
 Summary: Python package to produce summary pages for Parameter estimation codes
 
 This package helps the user to generate summary webpages to
-visualise the output from both LALInference and Bilby.
+visualise the output from any parameter estimation code
 
 
 Current build status
