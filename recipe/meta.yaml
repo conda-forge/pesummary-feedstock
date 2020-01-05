@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "0.2.4" %}
+{% set version = "0.3.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f7bdd66f170bfcc9b85b504a45163f3975d25e6fb2893fc6db129d36fc7eea4a
+  sha256: a3bda3ecc62b0878705a74177927dd43a93a30134eb2303175c7c8758b9c990d
 
 build:
   number: 0
