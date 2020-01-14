@@ -10,7 +10,7 @@ source:
   sha256: d1ba9dfd212e45f90cadefbf95a4d3d8a9cbf3481d08328cc6a14b785e5f0bc9
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
   entry_points:
@@ -43,7 +43,6 @@ requirements:
     - pandas
     - pepredicates
     - plotly
-    - pluggy >=0.9.0
     - pygments
     - pytables >=3.4.4
     - python >=3.6
