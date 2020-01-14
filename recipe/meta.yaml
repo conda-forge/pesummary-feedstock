@@ -14,15 +14,18 @@ build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
   entry_points:
-    - summaryconvert = pesummary.gw.file.one_format:main
-    - summarypages = pesummary.cli.summarypages:main
-    - summaryplots = pesummary.cli.summaryplots:main
-    - summarypublication = pesummary.cli.summarypublication:main
     - summaryclassification = pesummary.cli.summaryclassification:main
     - summaryclean = pesummary.cli.summaryclean:main
-    - summaryreview = pesummary.cli.summaryreview:main
     - summarycombine = pesummary.cli.summarycombine:main
     - summarycombine_metafiles = pesummary.cli.summarycombine_metafiles:main
+    - summaryconvert = pesummary.gw.file.one_format:main
+    - summarydetchar = pesummary.cli.summarydetchar:main
+    - summarypages = pesummary.cli.summarypages:main
+    - summarypageslw = pesummary.cli.summarypageslw:main
+    - summaryplots = pesummary.cli.summaryplots:main
+    - summarypublication = pesummary.cli.summarypublication:main
+    - summaryreview = pesummary.cli.summaryreview:main
+    - summaryversion = pesummary.cli.summaryversion:main
 
 requirements:
   host:
@@ -30,15 +33,18 @@ requirements:
     - python >=3.6
     - setuptools
   run:
-    - astropy
+    - astropy >=3.2.3
     - corner
     - deepdish
     - gwpy
     - h5py
-    - lscsoft-glue
     - matplotlib-base
-    - numpy
+    - numpy >=1.15.4
+    - p_astro
     - pandas
+    - pepredicates
+    - plotly
+    - pluggy >=0.9.0
     - pygments
     - python >=3.6
     - python-lal
@@ -46,8 +52,7 @@ requirements:
     - scipy
     - seaborn
     - statsmodels
-    - pepredicates
-    - plotly
+    - tables >=3.4.4
 
 test:
   imports:
@@ -64,19 +69,22 @@ test:
     - pesummary.gw.file
     - pesummary.gw.file.formats
     - pesummary.gw.pepredicates
+    - pesummary.gw.p_astro
     - pesummary.gw.plots
     - pesummary.utils
   commands:
-    - summarypages --help
-    - summaryplots --help
-    - summarypublication --help
     - summaryclassification --help
     - summaryclean --help
-    - summaryreview --help
     - summarycombine --help
     - summarycombine_metafiles --help
-    - summaryversion --help
+    - summaryconvert --help
     - summarydetchar --help
+    - summarypages --help
+    - summarypageslw --help
+    - summaryplots --help
+    - summarypublication --help
+    - summaryreview --help
+    - summaryversion --help
 
 about:
   home: https://git.ligo.org/lscsoft/pesummary
