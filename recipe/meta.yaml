@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,22 +7,24 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a3bda3ecc62b0878705a74177927dd43a93a30134eb2303175c7c8758b9c990d
+  sha256: d1ba9dfd212e45f90cadefbf95a4d3d8a9cbf3481d08328cc6a14b785e5f0bc9
 
 build:
   number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
   entry_points:
-    - summaryconvert = pesummary.gw.file.one_format:main
-    - summarypages = pesummary.cli.summarypages:main
-    - summaryplots = pesummary.cli.summaryplots:main
-    - summarypublication = pesummary.cli.summarypublication:main
     - summaryclassification = pesummary.cli.summaryclassification:main
     - summaryclean = pesummary.cli.summaryclean:main
-    - summaryreview = pesummary.cli.summaryreview:main
     - summarycombine = pesummary.cli.summarycombine:main
     - summarycombine_metafiles = pesummary.cli.summarycombine_metafiles:main
+    - summarydetchar = pesummary.cli.summarydetchar:main
+    - summarypages = pesummary.cli.summarypages:main
+    - summarypageslw = pesummary.cli.summarypageslw:main
+    - summaryplots = pesummary.cli.summaryplots:main
+    - summarypublication = pesummary.cli.summarypublication:main
+    - summaryreview = pesummary.cli.summaryreview:main
+    - summaryversion = pesummary.cli.summaryversion:main
 
 requirements:
   host:
@@ -30,24 +32,26 @@ requirements:
     - python >=3.6
     - setuptools
   run:
-    - astropy
+    - astropy >=3.2.3
     - corner
     - deepdish
     - gwpy
     - h5py
-    - lscsoft-glue
     - matplotlib-base
-    - numpy
+    - numpy >=1.15.4
+    - p_astro
     - pandas
+    - pepredicates
+    - plotly
+    - pluggy >=0.9.0
     - pygments
+    - pytables >=3.4.4
     - python >=3.6
     - python-lal
     - python-lalsimulation
     - scipy
     - seaborn
     - statsmodels
-    - pepredicates
-    - plotly
 
 test:
   imports:
@@ -64,19 +68,21 @@ test:
     - pesummary.gw.file
     - pesummary.gw.file.formats
     - pesummary.gw.pepredicates
+    - pesummary.gw.p_astro
     - pesummary.gw.plots
     - pesummary.utils
   commands:
-    - summarypages --help
-    - summaryplots --help
-    - summarypublication --help
     - summaryclassification --help
     - summaryclean --help
-    - summaryreview --help
     - summarycombine --help
     - summarycombine_metafiles --help
-    - summaryversion --help
     - summarydetchar --help
+    - summarypages --help
+    - summarypageslw --help
+    - summaryplots --help
+    - summarypublication --help
+    - summaryreview --help
+    - summaryversion --help
 
 about:
   home: https://git.ligo.org/lscsoft/pesummary
