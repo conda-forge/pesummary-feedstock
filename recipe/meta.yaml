@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d1ba9dfd212e45f90cadefbf95a4d3d8a9cbf3481d08328cc6a14b785e5f0bc9
+  sha256: 35e02b354888dc6061b01605c0998c792b7ffe5c90628bb4113194a9a74abf83
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
   entry_points:
@@ -44,7 +44,7 @@ requirements:
     - pepredicates
     - plotly
     - pygments
-    - pytables >=3.4.4
+    - pytables
     - python >=3.6
     - python-lal
     - python-lalsimulation
