@@ -10,7 +10,7 @@ source:
   sha256: 35e02b354888dc6061b01605c0998c792b7ffe5c90628bb4113194a9a74abf83
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
   entry_points:
@@ -49,7 +49,7 @@ requirements:
     - python-lal
     - python-lalsimulation
     - scipy
-    - seaborn
+    - seaborn <0.10.0a0
     - statsmodels
 
 test:
@@ -69,6 +69,10 @@ test:
     - pesummary.gw.pepredicates
     - pesummary.gw.p_astro
     - pesummary.gw.plots
+    - pesummary.gw.plots.bounded_2d_kde
+    - pesummary.gw.plots.detchar
+    - pesummary.gw.plots.main
+    - pesummary.gw.plots.violin
     - pesummary.utils
   commands:
     - summaryclassification --help
