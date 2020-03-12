@@ -10,21 +10,21 @@ source:
   sha256: d327d56abaaa93d819f3bc26085db1317aa0644977d516ce904ff348823c5ccf
 
 build:
-  number: 0
-  noarch: python
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   entry_points:
     - summaryclassification = pesummary.cli.summaryclassification:main
     - summaryclean = pesummary.cli.summaryclean:main
     - summarycombine = pesummary.cli.summarycombine:main
-    - summarycombine_metafiles = pesummary.cli.summarycombine_metafiles:main
     - summarydetchar = pesummary.cli.summarydetchar:main
     - summarypages = pesummary.cli.summarypages:main
     - summarypageslw = pesummary.cli.summarypageslw:main
+    - summarypipe = pesummary.cli.summarypipe:main
     - summaryplots = pesummary.cli.summaryplots:main
     - summarypublication = pesummary.cli.summarypublication:main
     - summaryreview = pesummary.cli.summaryreview:main
     - summaryversion = pesummary.cli.summaryversion:main
+  noarch: python
+  number: 0
+  script: '{{ PYTHON }} -m pip install . -vv'
 
 requirements:
   host:
@@ -37,11 +37,12 @@ requirements:
     - deepdish
     - gwpy
     - h5py
+    - ligo.skymap
     - matplotlib-base
     - numpy >=1.15.4
     - p_astro
-    - pandas
-    - pepredicates
+    - pandas <1.0.0a0
+    - pepredicates >=0.0.2
     - plotly
     - pygments
     - pytables
@@ -49,7 +50,7 @@ requirements:
     - python-lal
     - python-lalsimulation
     - scipy
-    - seaborn <0.10.0a0
+    - seaborn
     - statsmodels
 
 test:
@@ -78,10 +79,10 @@ test:
     - summaryclassification --help
     - summaryclean --help
     - summarycombine --help
-    - summarycombine_metafiles --help
     - summarydetchar --help
     - summarypages --help
     - summarypageslw --help
+    - summarypipe --help
     - summaryplots --help
     - summarypublication --help
     - summaryreview --help
