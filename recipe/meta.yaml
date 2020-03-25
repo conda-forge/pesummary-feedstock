@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "0.3.4" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d327d56abaaa93d819f3bc26085db1317aa0644977d516ce904ff348823c5ccf
+  sha256: f76cf9d9ee5e34916aced9ce6f85815cb6c6afed15b31f74cf3fdb844f9f63e1
 
 build:
   entry_points:
@@ -24,7 +24,7 @@ build:
     - summaryversion = pesummary.cli.summaryversion:main
   noarch: python
   number: 0
-  script: '{{ PYTHON }} -m pip install . -vv'
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
