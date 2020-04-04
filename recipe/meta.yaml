@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f76cf9d9ee5e34916aced9ce6f85815cb6c6afed15b31f74cf3fdb844f9f63e1
+  sha256: 84e4baf7306be42db27dc08ef95d03a8afbf18f1c70846031c9f2507d97402d3
 
 build:
   entry_points:
@@ -15,11 +15,13 @@ build:
     - summaryclean = pesummary.cli.summaryclean:main
     - summarycombine = pesummary.cli.summarycombine:main
     - summarydetchar = pesummary.cli.summarydetchar:main
+    - summarymodify = pesummary.cli.summarymodify:main
     - summarypages = pesummary.cli.summarypages:main
     - summarypageslw = pesummary.cli.summarypageslw:main
     - summarypipe = pesummary.cli.summarypipe:main
     - summaryplots = pesummary.cli.summaryplots:main
     - summarypublication = pesummary.cli.summarypublication:main
+    - summaryrecreate = pesummary.cli.summaryrecreate:main
     - summaryreview = pesummary.cli.summaryreview:main
     - summaryversion = pesummary.cli.summaryversion:main
   noarch: python
@@ -48,7 +50,7 @@ requirements:
     - pytables
     - python >=3.6
     - python-lal
-    - python-lalsimulation
+    - python-lalsimulation >=2.0.0
     - scipy
     - seaborn
     - statsmodels
@@ -80,11 +82,13 @@ test:
     - summaryclean --help
     - summarycombine --help
     - summarydetchar --help
+    - summarymodify --help
     - summarypages --help
     - summarypageslw --help
     - summarypipe --help
     - summaryplots --help
     - summarypublication --help
+    - summaryrecreate --help
     - summaryreview --help
     - summaryversion --help
 
