@@ -76,6 +76,7 @@ test:
     - pesummary.gw.plots.detchar
     - pesummary.gw.plots.main
     - pesummary.gw.plots.violin
+    - pesummary.io
     - pesummary.utils
   commands:
     - summaryclassification --help
