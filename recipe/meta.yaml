@@ -51,6 +51,7 @@ requirements:
     - python >=3.6
     - python-lal
     - python-lalsimulation >=2.0.0
+    - python-lalinference
     - scipy
     - seaborn
     - statsmodels
