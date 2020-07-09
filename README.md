@@ -5,7 +5,7 @@ Home: https://git.ligo.org/lscsoft/pesummary
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Python package to produce summary pages for Parameter estimation codes
 
