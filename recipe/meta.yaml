@@ -51,6 +51,7 @@ requirements:
     - pygments
     - pytables
     - python >=3.6
+    - ligo-gracedb
     - python-lal
     - python-lalsimulation >=2.0.0
     - python-lalinference
