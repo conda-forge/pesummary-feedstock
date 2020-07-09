@@ -14,7 +14,9 @@ build:
     - summaryclassification = pesummary.cli.summaryclassification:main
     - summaryclean = pesummary.cli.summaryclean:main
     - summarycombine = pesummary.cli.summarycombine:main
+    - summarycompare = pesummary.cli.summarycompare:main
     - summarydetchar = pesummary.cli.summarydetchar:main
+    - summarygracedb = pesummary.cli.summarygracedb:main
     - summarymodify = pesummary.cli.summarymodify:main
     - summarypages = pesummary.cli.summarypages:main
     - summarypageslw = pesummary.cli.summarypageslw:main
@@ -59,40 +61,9 @@ requirements:
 test:
   imports:
     - pesummary
-    - pesummary.conf
-    - pesummary.core.css
-    - pesummary.core.file
-    - pesummary.core.file.formats
-    - pesummary.core.js
-    - pesummary.core.file
-    - pesummary.core.plots
-    - pesummary.core.webpage
-    - pesummary.gw
-    - pesummary.gw.file
-    - pesummary.gw.file.formats
-    - pesummary.gw.pepredicates
-    - pesummary.gw.p_astro
-    - pesummary.gw.plots
-    - pesummary.gw.plots.bounded_2d_kde
-    - pesummary.gw.plots.detchar
-    - pesummary.gw.plots.main
-    - pesummary.gw.plots.violin
-    - pesummary.io
-    - pesummary.utils
   commands:
-    - summaryclassification --help
-    - summaryclean --help
-    - summarycombine --help
-    - summarydetchar --help
-    - summarymodify --help
-    - summarypages --help
-    - summarypageslw --help
-    - summarypipe --help
-    - summaryplots --help
-    - summarypublication --help
-    - summaryrecreate --help
-    - summaryreview --help
-    - summaryversion --help
+    - summarytest --type imports
+    - summarytest --type executables
 
 about:
   home: https://git.ligo.org/lscsoft/pesummary
