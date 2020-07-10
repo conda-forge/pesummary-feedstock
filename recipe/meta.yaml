@@ -26,7 +26,7 @@ build:
     - summaryrecreate = pesummary.cli.summaryrecreate:main
     - summaryreview = pesummary.cli.summaryreview:main
     - summaryversion = pesummary.cli.summaryversion:main
-  noarch: python
+  skip: true  # [win]
   number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
