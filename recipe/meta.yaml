@@ -26,14 +26,14 @@ build:
     - summaryrecreate = pesummary.cli.summaryrecreate:main
     - summaryreview = pesummary.cli.summaryreview:main
     - summaryversion = pesummary.cli.summaryversion:main
-  noarch: python
-  number: 0
+  skip: true  # [win]
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python
     - setuptools
   run:
     - astropy >=3.2.3
@@ -45,12 +45,12 @@ requirements:
     - matplotlib-base
     - numpy >=1.15.4
     - p_astro
-    - pandas <1.0.0a0
+    - pandas
     - pepredicates >=0.0.2
     - plotly
     - pygments
     - pytables
-    - python >=3.6
+    - python
     - ligo-gracedb
     - python-lal
     - python-lalsimulation >=2.0.0
@@ -58,6 +58,7 @@ requirements:
     - scipy
     - seaborn
     - statsmodels
+    - tqdm >=4.44.0
 
 test:
   imports:
