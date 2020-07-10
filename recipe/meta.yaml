@@ -33,7 +33,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python
     - setuptools
   run:
     - astropy >=3.2.3
@@ -50,7 +50,7 @@ requirements:
     - plotly
     - pygments
     - pytables
-    - python >=3.6
+    - python
     - ligo-gracedb
     - python-lal
     - python-lalsimulation >=2.0.0
