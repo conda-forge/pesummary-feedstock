@@ -45,7 +45,7 @@ requirements:
     - matplotlib-base
     - numpy >=1.15.4
     - p_astro
-    - pandas <1.0.0a0
+    - pandas
     - pepredicates >=0.0.2
     - plotly
     - pygments
@@ -58,6 +58,7 @@ requirements:
     - scipy
     - seaborn
     - statsmodels
+    - tqdm >= 4.44.0
 
 test:
   imports:
@@ -65,6 +66,7 @@ test:
   commands:
     - summarytest --type imports
     - summarytest --type executables
+    - python -m pytest --pyargs pesummary.tests.read_test
 
 about:
   home: https://git.ligo.org/lscsoft/pesummary
