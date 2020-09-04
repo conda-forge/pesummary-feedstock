@@ -63,6 +63,8 @@ requirements:
     - tqdm >=4.44.0
 
 test:
+  requires:
+    - nbformat
   imports:
     - pesummary
   commands:
