@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 47d978cdd503ce5e61ee9c26c6daf0a10def139b90834b918929cf06a9583baf
+  patches:
+    - clean-requirements.txt
 
 build:
   entry_points:
@@ -43,8 +45,9 @@ requirements:
     - deepdish
     - gwpy
     - h5py
+    - ligo-gracedb
     - ligo.skymap
-    - matplotlib-base
+    - matplotlib-base <=3.3.2
     - numpy >=1.15.4
     - p_astro
     - pandas
@@ -53,10 +56,10 @@ requirements:
     - pygments
     - pytables
     - python
-    - ligo-gracedb
     - python-lal
     - python-lalsimulation >=2.0.0
     - python-lalinference
+    - python-ligo-lw
     - scipy
     - seaborn
     - statsmodels
