@@ -68,11 +68,9 @@ requirements:
 test:
   requires:
     - nbformat
-    - pip
   imports:
     - pesummary
   commands:
-    - pip check
     - summarytest --type imports
     - summarytest --type executables
 
