@@ -31,13 +31,13 @@ build:
     - summarytest = pesummary.cli.summarytest:main
     - summaryversion = pesummary.cli.summaryversion:main
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools
   run:
     - astropy >=3.2.3
@@ -55,13 +55,13 @@ requirements:
     - plotly
     - pygments
     - pytables
-    - python
+    - python >=3.6
     - python-lal
     - python-lalsimulation >=2.0.0
     - python-lalinference
     - python-ligo-lw
     - scipy
-    - seaborn
+    - seaborn >=0.11.0
     - statsmodels
     - tqdm >=4.44.0
 
