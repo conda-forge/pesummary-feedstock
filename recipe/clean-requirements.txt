@@ -1,16 +1,12 @@
 diff --git a/setup.py b/setup.py
-index 3df5e00..ee6e410 100644
+index a9e951d..d205068 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -101,11 +101,9 @@ setup(name='pesummary',
+@@ -101,7 +101,6 @@ setup(name='pesummary',
            'pandas',
            'pygments',
            'astropy>=3.2.3',
 -          'lalsuite>=6.70.0',
            'python-ligo-lw',
            'ligo-gracedb',
-           'gwpy',
--          'configparser',
-           'plotly',
-           'tqdm>=4.44.0'],
-       include_package_data=True,
+           'gwpy>=2.0.2',
