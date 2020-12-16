@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 47d978cdd503ce5e61ee9c26c6daf0a10def139b90834b918929cf06a9583baf
+  sha256: 21636f284fa59e0f9263ddb9c259f3dc464828fc794ddae3cac1aa3756864dfa
   patches:
     - clean-requirements.txt
 
@@ -31,7 +31,7 @@ build:
     - summarytest = pesummary.cli.summarytest:main
     - summaryversion = pesummary.cli.summaryversion:main
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -43,7 +43,7 @@ requirements:
     - astropy >=3.2.3
     - corner
     - deepdish
-    - gwpy
+    - gwpy >=2.0.2
     - h5py
     - ligo-gracedb
     - ligo.skymap
