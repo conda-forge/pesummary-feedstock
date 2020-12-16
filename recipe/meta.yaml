@@ -43,7 +43,7 @@ requirements:
     - astropy >=3.2.3
     - corner
     - deepdish
-    - gwpy
+    - gwpy >=2.0.2
     - h5py
     - ligo-gracedb
     - ligo.skymap
