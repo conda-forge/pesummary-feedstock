@@ -51,7 +51,7 @@ requirements:
     - ligo-gracedb
     - ligo.skymap
     - matplotlib-base
-    - numpy >=1.15.4
+    - numpy >=1.15.4,<=1.19.5
     - p_astro
     - pandas
     - pepredicates >=0.0.2
@@ -66,7 +66,7 @@ requirements:
     - scipy
     - seaborn >=0.11.0
     - statsmodels
-    - tqdm >=4.44.0
+    - tqdm >=4.44.0,<=4.54.1
 
 test:
   requires:
