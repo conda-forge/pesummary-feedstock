@@ -70,10 +70,12 @@ requirements:
 
 test:
   requires:
+    - pip
     - nbformat
   imports:
     - pesummary
   commands:
+    - python -m pip check
     - summarytest --type imports
     - summarytest --type executables
 
