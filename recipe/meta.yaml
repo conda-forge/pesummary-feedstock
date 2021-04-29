@@ -51,7 +51,7 @@ requirements:
     - ligo-gracedb
     - ligo.skymap
     - matplotlib-base
-    - numpy >=1.15.4,<=1.19.5
+    - numpy >=1.15.4
     - p_astro
     - pandas
     - pepredicates >=0.0.2
