@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 21636f284fa59e0f9263ddb9c259f3dc464828fc794ddae3cac1aa3756864dfa
+  sha256: fdc98e268df5da9e2c2b97e924e05e7bb967c32638cd1d484898863b7c33a307
   patches:
     - clean-requirements.txt
+    - numpy-requirements.txt
 
 build:
   entry_points:
     - summaryclassification = pesummary.cli.summaryclassification:main
     - summaryclean = pesummary.cli.summaryclean:main
     - summarycombine = pesummary.cli.summarycombine:main
+    - summarycombine_posteriors = pesummary.cli.summarycombine_posteriors:main
     - summarycompare = pesummary.cli.summarycompare:main
     - summarydetchar = pesummary.cli.summarydetchar:main
+    - summaryextract = pesummary.cli.summaryextract:main
     - summarygracedb = pesummary.cli.summarygracedb:main
     - summaryjscompare = pesummary.cli.summaryjscompare:main
     - summarymodify = pesummary.cli.summarymodify:main
@@ -29,9 +32,10 @@ build:
     - summaryrecreate = pesummary.cli.summaryrecreate:main
     - summaryreview = pesummary.cli.summaryreview:main
     - summarytest = pesummary.cli.summarytest:main
+    - summarytgr = pesummary.cli.summarytgr:main
     - summaryversion = pesummary.cli.summaryversion:main
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -63,14 +67,16 @@ requirements:
     - scipy
     - seaborn >=0.11.0
     - statsmodels
-    - tqdm >=4.44.0
+    - tqdm >=4.44.0,<=4.54.1
 
 test:
   requires:
+    - pip
     - nbformat
   imports:
     - pesummary
   commands:
+    - python -m pip check
     - summarytest --type imports
     - summarytest --type executables
 
