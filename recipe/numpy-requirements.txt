@@ -1,0 +1,23 @@
+diff --git a/requirements.txt b/requirements.txt
+index 9876a05..51c75eb 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -1,4 +1,4 @@
+-numpy>=1.15.4,<=1.19.5
++numpy>=1.15.4
+ h5py
+ matplotlib
+ seaborn>=0.11.0
+diff --git a/setup.py b/setup.py
+index 0a01bfd..9686f8c 100644
+--- a/setup.py
++++ b/setup.py
+@@ -79,7 +79,7 @@ setup(name='pesummary',
+            "build_py": VersionedBuildPy,
+       },
+       install_requires=[
+-          'numpy>=1.15.4,<=1.19.5',
++          'numpy>=1.15.4',
+           'h5py',
+           'matplotlib',
+           'seaborn>=0.11.0',

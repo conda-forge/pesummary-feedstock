@@ -10,6 +10,7 @@ source:
   sha256: fdc98e268df5da9e2c2b97e924e05e7bb967c32638cd1d484898863b7c33a307
   patches:
     - clean-requirements.txt
+    - numpy-requirements.txt
 
 build:
   entry_points:
