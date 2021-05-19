@@ -45,7 +45,7 @@ requirements:
     - setuptools
   run:
     - astropy >=3.2.3
-    - bilby >= 1.1.1
+    - bilby >=1.1.1
     - corner
     - deepdish
     - gwpy >=2.0.2
