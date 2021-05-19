@@ -9,7 +9,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: ca61d31f04760714a8456cffa717496e48c30149cc00c8c7852c65946a873572
   patches:
-    - clean-requirements.txt
+    - clean-requirements.patch
 
 build:
   entry_points:
