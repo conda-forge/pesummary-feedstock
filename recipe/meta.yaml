@@ -30,6 +30,7 @@ build:
     - summarypublication = pesummary.cli.summarypublication:main
     - summaryrecreate = pesummary.cli.summaryrecreate:main
     - summaryreview = pesummary.cli.summaryreview:main
+    - summarysplit = pesummary.cli.summarysplit:main
     - summarytest = pesummary.cli.summarytest:main
     - summarytgr = pesummary.cli.summarytgr:main
     - summaryversion = pesummary.cli.summaryversion:main
@@ -43,7 +44,7 @@ requirements:
     - python >=3.6
     - setuptools
   run:
-    - astropy >=3.2.3
+    - astropy >=3.2.3,<=4.2.1
     - corner
     - deepdish
     - gwpy >=2.0.2
@@ -60,13 +61,13 @@ requirements:
     - pytables
     - python >=3.6
     - python-lal
-    - python-lalsimulation >=2.0.0
+    - python-lalsimulation >=3.0.0
     - python-lalinference
     - python-ligo-lw
     - scipy
     - seaborn >=0.11.0
     - statsmodels
-    - tqdm >=4.44.0,<=4.54.1
+    - tqdm >=4.44.0
   run_constrained:
     - bilby >=1.1.1
 
