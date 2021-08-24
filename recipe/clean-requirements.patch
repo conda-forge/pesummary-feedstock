@@ -1,12 +1,12 @@
 diff --git a/setup.py b/setup.py
-index 9686f8c..5b71a41 100644
+index 83ac183..888f03f 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -90,7 +90,6 @@ setup(name='pesummary',
+@@ -91,6 +91,7 @@ setup(name='pesummary',
            'pandas',
            'pygments',
-           'astropy>=3.2.3',
--          'lalsuite>=6.70.0',
+           'astropy>=3.2.3,<=4.2.1',
++          'lalsuite>=7.0.0',
            'python-ligo-lw',
            'ligo-gracedb',
            'gwpy>=2.0.2',
