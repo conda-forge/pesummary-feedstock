@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "0.12.1" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ca61d31f04760714a8456cffa717496e48c30149cc00c8c7852c65946a873572
+  sha256: fc587a467dc5be8a60671c73be463bd88af1e28955233ae990f8c8876a3705e2
   patches:
     - clean-requirements.patch
 
@@ -30,6 +30,7 @@ build:
     - summarypublication = pesummary.cli.summarypublication:main
     - summaryrecreate = pesummary.cli.summaryrecreate:main
     - summaryreview = pesummary.cli.summaryreview:main
+    - summarysplit = pesummary.cli.summarysplit:main
     - summarytest = pesummary.cli.summarytest:main
     - summarytgr = pesummary.cli.summarytgr:main
     - summaryversion = pesummary.cli.summaryversion:main
@@ -43,7 +44,7 @@ requirements:
     - python >=3.6
     - setuptools
   run:
-    - astropy >=3.2.3
+    - astropy >=3.2.3,<=4.2.1
     - corner
     - deepdish
     - gwpy >=2.0.2
@@ -60,13 +61,13 @@ requirements:
     - pytables
     - python >=3.6
     - python-lal
-    - python-lalsimulation >=2.0.0
+    - python-lalsimulation >=3.0.0
     - python-lalinference
     - python-ligo-lw
     - scipy
     - seaborn >=0.11.0
     - statsmodels
-    - tqdm >=4.44.0,<=4.54.1
+    - tqdm >=4.44.0
   run_constrained:
     - bilby >=1.1.1
 
