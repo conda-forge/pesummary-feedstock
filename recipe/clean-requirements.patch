@@ -1,8 +1,14 @@
 diff --git a/setup.py b/setup.py
-index 888f03f..83ac183 100644
+index 888f03f..5786bfa 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -91,7 +91,6 @@ setup(name='pesummary',
+@@ -85,13 +85,11 @@ setup(name='pesummary',
+           'seaborn>=0.11.0',
+           'statsmodels',
+           'corner',
+-          'cython>=0.28.5',
+           'tables',
+           'deepdish',
            'pandas',
            'pygments',
            'astropy>=3.2.3,<=4.2.1',
