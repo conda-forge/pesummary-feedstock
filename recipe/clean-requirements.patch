@@ -1,17 +1,11 @@
 diff --git a/setup.py b/setup.py
-index 888f03f..5786bfa 100644
+index 392cef0..f8c37b3 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -85,13 +85,11 @@ setup(name='pesummary',
-           'seaborn>=0.11.0',
-           'statsmodels',
-           'corner',
--          'cython>=0.28.5',
-           'tables',
-           'deepdish',
+@@ -90,7 +90,6 @@ setup(name='pesummary',
            'pandas',
            'pygments',
-           'astropy>=3.2.3,<=4.2.1',
+           'astropy>=3.2.3',
 -          'lalsuite>=7.0.0',
            'python-ligo-lw',
            'ligo-gracedb',
