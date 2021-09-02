@@ -44,7 +44,7 @@ requirements:
     - python >=3.6
     - setuptools
   run:
-    - astropy >=3.2.3,<=4.2.1
+    - astropy >=3.2.3
     - corner
     - deepdish
     - gwpy >=2.0.2
