@@ -53,7 +53,7 @@ requirements:
     - ligo.skymap
     - matplotlib-base
     - numpy >=1.15.4
-    - p_astro
+    - p_astro >=0.4
     - pandas
     - pepredicates >=0.0.3
     - plotly
