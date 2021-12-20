@@ -78,7 +78,9 @@ test:
   imports:
     - pesummary
   commands:
+    # check requirements
     - python -m pip check
+    # run basic sanity checks
     - summarytest --type imports
     - summarytest --type executables
 
