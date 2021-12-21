@@ -35,7 +35,7 @@ build:
     - summarytgr = pesummary.cli.summarytgr:main
     - summaryversion = pesummary.cli.summaryversion:main
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -50,10 +50,10 @@ requirements:
     - gwpy >=2.0.2
     - h5py
     - ligo-gracedb
+    - ligo.em-bright >=0.1.2
     - ligo.skymap
     - matplotlib-base
     - numpy >=1.15.4
-    - p_astro >=0.4
     - pandas
     - pepredicates >=0.0.3
     - plotly
