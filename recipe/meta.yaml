@@ -41,13 +41,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
     - setuptools
   run:
     - astropy >=3.2.3
     - corner
     - deepdish
-    - gwpy >=2.0.2
+    - gwpy >=2.1.2
     - h5py
     - ligo-gracedb
     - ligo.em-bright >=0.1.2
@@ -59,7 +59,7 @@ requirements:
     - plotly
     - pygments
     - pytables
-    - python >=3.6
+    - python >=3.7
     - python-lal
     - python-lalsimulation >=3.0.0
     - python-lalinference
