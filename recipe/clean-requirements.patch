@@ -1,12 +1,12 @@
 diff --git a/setup.cfg b/setup.cfg
-index 41bf6f0..9c88d7d 100644
+index b2decc7..38277bc 100644
 --- a/setup.cfg
 +++ b/setup.cfg
-@@ -53,7 +53,6 @@ install_requires =
-         deepdish
-         gwpy >=2.1.2
-         h5py
+@@ -51,7 +51,6 @@ install_requires =
+ 	deepdish
+ 	gwpy >=2.1.2
+ 	h5py
 -        lalsuite >=7.0.0
-         ligo-gracedb
-         matplotlib
-         numpy >=1.15.4
+ 	ligo-gracedb
+ 	matplotlib
+ 	numpy >=1.15.4
