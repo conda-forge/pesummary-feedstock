@@ -41,7 +41,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
     - setuptools
   run:
     - astropy >=3.2.3
