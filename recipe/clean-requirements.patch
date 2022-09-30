@@ -1,24 +1,10 @@
-From b0ed417c2ab73716b262d6cbd91b84c55415ef73 Mon Sep 17 00:00:00 2001
-From: Charlie Hoy <charlie.hoy@port.ac.uk>
-Date: Fri, 30 Sep 2022 09:14:25 +0100
-Subject: [PATCH] remove lalsuite as this is not needed for the conda install
-
----
- setup.cfg | 1 -
- 1 file changed, 1 deletion(-)
-
-diff --git a/setup.cfg b/setup.cfg
-index 0f76630..46c8f83 100644
---- a/setup.cfg
-+++ b/setup.cfg
-@@ -51,7 +51,6 @@ install_requires =
-         deepdish
-         gwpy >=2.1.2
-         h5py
--        lalsuite >=7.0.0
-         ligo-gracedb
-         matplotlib
-         numpy >=1.15.4
--- 
-2.32.1 (Apple Git-133)
-
+--- setup.cfg	2022-09-22 10:38:17.153194200 +0100
++++ setup.cfg	2022-09-30 09:40:55.183161600 +0100
+@@ -51,7 +51,6 @@
+ 	deepdish
+ 	gwpy >=2.1.2
+ 	h5py
+-	lalsuite >=7.0.0
+ 	ligo-gracedb
+ 	matplotlib
+ 	numpy >=1.15.4
