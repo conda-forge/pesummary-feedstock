@@ -1,10 +1,11 @@
 --- setup.cfg	2022-09-22 10:38:17.153194200 +0100
 +++ setup.cfg	2022-09-30 09:40:55.183161600 +0100
-@@ -51,7 +51,6 @@
+@@ -51,7 +51,7 @@
  	deepdish
  	gwpy >=2.1.2
  	h5py
 -	lalsuite >=7.0.0
++	setuptools_scm
  	ligo-gracedb
  	matplotlib
  	numpy >=1.15.4
