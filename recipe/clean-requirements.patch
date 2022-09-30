@@ -1,14 +1,10 @@
-diff --git a/setup.py b/setup.py
-index 2796dc2d..9e01004d 100644
---- a/setup.py
-+++ b/setup.py
-@@ -91,8 +91,7 @@ setup(name='pesummary',
-           'pandas',
-           'pygments',
-           'astropy>=3.2.3',
--          'lalsuite>=7.0.0',
--          'python-ligo-lw<=1.7.1',
-+          'python-ligo-lw',
-           'ligo-gracedb',
-           'gwpy>=2.1.2',
-           'plotly',
+--- setup.cfg	2022-09-22 10:38:17.153194200 +0100
++++ setup.cfg	2022-09-30 09:40:55.183161600 +0100
+@@ -51,7 +51,6 @@
+ 	deepdish
+ 	gwpy >=2.1.2
+ 	h5py
+-	lalsuite >=7.0.0
+ 	ligo-gracedb
+ 	matplotlib
+ 	numpy >=1.15.4
