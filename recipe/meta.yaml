@@ -51,21 +51,17 @@ requirements:
     - gwpy >=2.1.2
     - h5py
     - ligo-gracedb
-    - ligo.em-bright >=0.1.2
-    - ligo.skymap
     - matplotlib-base
     - numpy >=1.15.4
     - pandas
-    - pepredicates >=0.0.3
     - plotly
     - pygments
     - pytables
-    - python >=3.7
+    - python >=3.8
     - python-lal
     - python-lalsimulation >=3.0.0
     - python-lalinference
-    - python-ligo-lw
-    - scipy
+    - scipy >=1.8.0
     - seaborn >=0.11.0
     - statsmodels
     - tqdm >=4.44.0
@@ -76,11 +72,10 @@ test:
   requires:
     - pip
     - nbformat
-  imports:
-    - pesummary
   commands:
     # check requirements
-    - python -m pip check
+    - python -m pip check pesummary
+    - python -m pip show pesummary
     # run basic sanity checks
     - summarytest --type imports
     - summarytest --type executables
