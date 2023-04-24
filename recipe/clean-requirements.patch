@@ -1,25 +1,17 @@
-From d3d044ea447e788b3b11654299eaa59803f673e8 Mon Sep 17 00:00:00 2001
+From 8072bf518262ac6d27c1c3c1e81e9a602ba213c2 Mon Sep 17 00:00:00 2001
 From: Charlie Hoy <charlie.hoy@port.ac.uk>
-Date: Mon, 24 Apr 2023 12:45:28 +0100
-Subject: [PATCH] pin python <= 3.10 and remove lalsuite
+Date: Mon, 24 Apr 2023 13:17:54 +0100
+Subject: [PATCH] remove lalsuite from pyproject.toml
 
 ---
- pyproject.toml | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
+ pyproject.toml | 1 -
+ 1 file changed, 1 deletion(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index dc3332b5..1acc6af8 100644
+index dc3332b5..e35d88f2 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
-@@ -23,14 +23,13 @@ classifiers = [
- 	"Programming Language :: Python :: 3.9",
- 	"Programming Language :: Python :: 3.10",
- ]
--requires-python = ">=3.8"
-+requires-python = ">=3.8,<=3.10"
- dependencies = [
- 	"astropy>=3.2.3",
- 	"corner",
+@@ -30,7 +30,6 @@ dependencies = [
  	"deepdish",
  	"gwpy >=2.1.2",
  	"h5py",

@@ -57,7 +57,7 @@ requirements:
     - plotly
     - pygments
     - pytables
-    - python >=3.8
+    - python >=3.8,<=3.10
     - python-lal
     - python-lalsimulation >=3.0.0
     - python-lalinference
