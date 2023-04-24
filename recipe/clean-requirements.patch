@@ -1,17 +1,25 @@
-From 3a56c4892e23d6411cd3f850640cbaeff88b2755 Mon Sep 17 00:00:00 2001
+From d3d044ea447e788b3b11654299eaa59803f673e8 Mon Sep 17 00:00:00 2001
 From: Charlie Hoy <charlie.hoy@port.ac.uk>
-Date: Mon, 24 Apr 2023 09:32:11 +0100
-Subject: [PATCH] patch pyproject.toml for conda
+Date: Mon, 24 Apr 2023 12:45:28 +0100
+Subject: [PATCH] pin python <= 3.10 and remove lalsuite
 
 ---
- pyproject.toml | 1 -
- 1 file changed, 1 deletion(-)
+ pyproject.toml | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index dc3332b5..e35d88f2 100644
+index dc3332b5..1acc6af8 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
-@@ -30,7 +30,6 @@ dependencies = [
+@@ -23,14 +23,13 @@ classifiers = [
+ 	"Programming Language :: Python :: 3.9",
+ 	"Programming Language :: Python :: 3.10",
+ ]
+-requires-python = ">=3.8"
++requires-python = ">=3.8,<=3.10"
+ dependencies = [
+ 	"astropy>=3.2.3",
+ 	"corner",
  	"deepdish",
  	"gwpy >=2.1.2",
  	"h5py",
