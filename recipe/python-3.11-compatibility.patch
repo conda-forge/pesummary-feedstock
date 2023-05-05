@@ -1,0 +1,25 @@
+From 6b74d111843f38e43819dc30fb9769a758e56360 Mon Sep 17 00:00:00 2001
+From: Charlie Hoy <charlie.hoy@port.ac.uk>
+Date: Fri, 5 May 2023 15:13:55 +0100
+Subject: [PATCH] ensure compatibility with python3.11
+
+---
+ pesummary/core/cli/parser.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pesummary/core/cli/parser.py b/pesummary/core/cli/parser.py
+index 8e6ea98c..e8e282ee 100644
+--- a/pesummary/core/cli/parser.py
++++ b/pesummary/core/cli/parser.py
+@@ -589,7 +589,7 @@ class ArgumentParser(argparse.ArgumentParser):
+ 
+             action = _kwargs.get('action', None)
+             action_class = self._registry_get('action', action, action)
+-            arglist = inspect.getargspec(action_class).args
++            arglist = inspect.getfullargspec(action_class).args
+             keys = _kwargs.copy().keys()
+             for key in keys:
+                 if (key not in arglist) and (key != "action"):
+-- 
+2.37.0 (Apple Git-136)
+

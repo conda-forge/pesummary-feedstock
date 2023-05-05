@@ -10,6 +10,7 @@ source:
   sha256: 9b55ed593f18a73fe9682d730fe2a3e4d91f492216515cfd79c59cc4603bd1e6
   patches:
     - clean-requirements.patch
+    - python-3.11-compatibility.patch
 
 build:
   entry_points:
@@ -41,7 +42,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8,<=3.10
+    - python >=3.8
     - setuptools
     - setuptools_scm
   run:
@@ -57,7 +58,7 @@ requirements:
     - plotly
     - pygments
     - pytables
-    - python >=3.8,<=3.10
+    - python >=3.8
     - python-lal
     - python-lalsimulation >=3.0.0
     - python-lalinference
