@@ -1,10 +1,24 @@
---- setup.cfg	2022-09-22 10:38:17.153194200 +0100
-+++ setup.cfg	2022-09-30 09:40:55.183161600 +0100
-@@ -51,7 +51,6 @@
- 	deepdish
- 	gwpy >=2.1.2
- 	h5py
--	lalsuite >=7.0.0
- 	ligo-gracedb
- 	matplotlib
- 	numpy >=1.15.4
+From 8072bf518262ac6d27c1c3c1e81e9a602ba213c2 Mon Sep 17 00:00:00 2001
+From: Charlie Hoy <charlie.hoy@port.ac.uk>
+Date: Mon, 24 Apr 2023 13:17:54 +0100
+Subject: [PATCH] remove lalsuite from pyproject.toml
+
+---
+ pyproject.toml | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index dc3332b5..e35d88f2 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -30,7 +30,6 @@ dependencies = [
+ 	"deepdish",
+ 	"gwpy >=2.1.2",
+ 	"h5py",
+-	"lalsuite >=7.0.0",
+ 	"ligo-gracedb",
+ 	"matplotlib",
+ 	"numpy >=1.15.4",
+-- 
+2.37.0 (Apple Git-136)
+
