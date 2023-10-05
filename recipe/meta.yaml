@@ -36,7 +36,7 @@ build:
     - summarytgr = pesummary.cli.summarytgr:main
     - summaryversion = pesummary.cli.summaryversion:main
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -63,7 +63,7 @@ requirements:
     - python-lalsimulation >=3.0.0
     - python-lalinference
     - scipy >=1.8.0
-    - seaborn >=0.11.0
+    - seaborn >=0.11.0,<0.13.0a0
     - statsmodels
     - tqdm >=4.44.0
   run_constrained:
