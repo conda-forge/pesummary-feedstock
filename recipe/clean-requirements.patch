@@ -1,6 +1,6 @@
-From 2d609d8ab824de07700c07d50806a25c6ba6abd7 Mon Sep 17 00:00:00 2001
+From c8b987e0a8b84eb878f2eb72cf82171ee0ac9f5c Mon Sep 17 00:00:00 2001
 From: Charlie Hoy <charlie.hoy@port.ac.uk>
-Date: Mon, 23 Oct 2023 18:04:17 +0100
+Date: Sat, 4 Nov 2023 13:08:16 +0000
 Subject: [PATCH] remove lalsuite for conda
 
 ---
