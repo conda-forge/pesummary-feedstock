@@ -10,7 +10,6 @@ source:
   sha256: c97fdbd1e5efe812b096031323987a5900a821c0db2fcdd2ab5de78045ee8462
   patches:
     - clean-requirements.patch
-    - python-3.11-compatibility.patch
 
 build:
   entry_points:
