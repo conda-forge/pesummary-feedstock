@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f457e969b43d1959d15283f41cc49c4abfe0291cdf0cf48b391570d437253edf
+  sha256: c97fdbd1e5efe812b096031323987a5900a821c0db2fcdd2ab5de78045ee8462
   patches:
     - clean-requirements.patch
-    - python-3.11-compatibility.patch
 
 build:
   entry_points:
