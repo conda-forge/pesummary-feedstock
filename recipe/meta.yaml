@@ -41,16 +41,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.9
     - setuptools
     - setuptools_scm
   run:
-    - astropy >=3.2.3
+    - astropy >=4.0
     - corner
     - deepdish
     - gwpy >=2.1.2
     - h5py
     - ligo-gracedb
+    - ligo.em-bright >=1.1.5
     - matplotlib-base <3.8.0
     - numpy >=1.15.4
     - pandas
@@ -59,10 +60,10 @@ requirements:
     - pytables
     - python >=3.9
     - python-lal
-    - python-lalsimulation >=3.0.0
+    - python-lalsimulation >=5.0.0
     - python-lalinference
     - scipy >=1.8.0
-    - seaborn >=0.11.0,<0.13.0
+    - seaborn >=0.12.2,<0.13.0
     - statsmodels
     - tqdm >=4.44.0
   run_constrained:
