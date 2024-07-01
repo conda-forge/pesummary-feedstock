@@ -1,6 +1,6 @@
-From b74d4ed90075afbc9cab03588966acc735333078 Mon Sep 17 00:00:00 2001
+From 989e1fe114495517fbdb4f2619293f6429dff357 Mon Sep 17 00:00:00 2001
 From: Charlie Hoy <charlie.hoy@port.ac.uk>
-Date: Tue, 20 Feb 2024 12:20:32 +0000
+Date: Mon, 1 Jul 2024 23:47:38 +0100
 Subject: [PATCH] remove lalsuite for conda
 
 ---
@@ -8,7 +8,7 @@ Subject: [PATCH] remove lalsuite for conda
  1 file changed, 1 deletion(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index 4b0ac5dd..b49aa901 100644
+index 9c790bed..a6282c09 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -29,7 +29,6 @@ dependencies = [
