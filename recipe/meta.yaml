@@ -45,14 +45,14 @@ requirements:
     - setuptools
     - setuptools_scm
   run:
-    - astropy >=4.0
+    - astropy >=5.0
     - corner
     - deepdish
-    - gwpy >=2.1.2
+    - gwpy >=3.0.6
     - h5py
     - ligo-gracedb
     - ligo.em-bright >=1.1.5
-    - matplotlib-base <3.8.0
+    - matplotlib-base >=3.6.0
     - numpy >=1.15.4
     - pandas
     - plotly
