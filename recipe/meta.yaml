@@ -45,7 +45,7 @@ requirements:
     - setuptools
     - setuptools_scm
   run:
-    - astropy >=5.0
+    - astropy-base >=5.0
     - corner
     - deepdish
     - gwpy >=3.0.6
