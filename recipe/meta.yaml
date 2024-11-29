@@ -35,7 +35,7 @@ build:
     - summarytgr = pesummary.cli.summarytgr:main
     - summaryversion = pesummary.cli.summaryversion:main
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -45,7 +45,7 @@ requirements:
     - setuptools
     - setuptools_scm
   run:
-    - astropy >=5.0
+    - astropy-base >=5.0
     - corner
     - deepdish
     - gwpy >=3.0.6
