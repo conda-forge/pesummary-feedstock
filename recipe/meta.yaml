@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 83c5a46ae1a8eeffb27f475037478785f75d4513616b5da769219cf73123ad1d
   patches:
     - clean-requirements.patch
@@ -35,17 +35,17 @@ build:
     - summarytgr = pesummary.cli.summarytgr:main
     - summaryversion = pesummary.cli.summaryversion:main
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools
     - setuptools_scm
   run:
-    - astropy >=5.0
+    - astropy-base >=5.0
     - corner
     - deepdish
     - gwpy >=3.0.6
@@ -58,7 +58,7 @@ requirements:
     - plotly
     - pygments
     - pytables
-    - python >=3.9
+    - python >={{ python_min }}
     - python-lal
     - python-lalsimulation >=5.0.0
     - python-lalinference
@@ -73,6 +73,7 @@ test:
   requires:
     - pip
     - nbformat
+    - python {{ python_min }}
   commands:
     # check requirements
     - python -m pip check pesummary
