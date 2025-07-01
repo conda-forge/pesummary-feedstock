@@ -48,12 +48,13 @@ requirements:
     - astropy-base >=5.0
     - corner
     - deepdish
-    - gwpy >=3.0.6
+    - gwpy >=3.0.11
     - h5py
+    - python-ligo-lw <2.0.0
     - ligo-gracedb
     - ligo.em-bright >=1.1.5
     - matplotlib-base >=3.6.0
-    - numpy >=1.15.4,<2.0.0
+    - numpy >=1.15.4
     - pandas
     - plotly
     - pygments
@@ -62,7 +63,7 @@ requirements:
     - python-lal
     - python-lalsimulation >=5.0.0
     - python-lalinference
-    - scipy >=1.8.0,<1.14.0
+    - scipy >=1.8.0
     - seaborn >=0.12.2,<0.13.0
     - statsmodels
     - tqdm >=4.44.0
