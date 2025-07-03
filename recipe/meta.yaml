@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "1.3.3" %}
+{% set version = "1.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 083273969e580315cf993308f85611dd202872b55b0a429f0f9525b6ce45ac63
+  sha256: 8d089c218041ed80c39f2c8dc00b9c117eca13bf47ef95c7f8148ca10357628c
   patches:
     - clean-requirements.patch
 
@@ -48,12 +48,13 @@ requirements:
     - astropy-base >=5.0
     - corner
     - deepdish
-    - gwpy >=3.0.6
+    - gwpy >=3.0.11
     - h5py
+    - python-ligo-lw <2.0.0
     - ligo-gracedb
     - ligo.em-bright >=1.1.5
-    - matplotlib-base >=3.6.0
-    - numpy >=1.15.4,<2.0.0
+    - matplotlib-base >=3.6.0,<3.10.0
+    - numpy >=1.15.4
     - pandas
     - plotly
     - pygments
@@ -62,7 +63,7 @@ requirements:
     - python-lal
     - python-lalsimulation >=5.0.0
     - python-lalinference
-    - scipy >=1.8.0,<1.14.0
+    - scipy >=1.8.0
     - seaborn >=0.12.2,<0.13.0
     - statsmodels
     - tqdm >=4.44.0
