@@ -1,6 +1,6 @@
-From 989e1fe114495517fbdb4f2619293f6429dff357 Mon Sep 17 00:00:00 2001
+From 23b88b7656ef33238e782c7c8fd2eeb3612eeb77 Mon Sep 17 00:00:00 2001
 From: Charlie Hoy <charlie.hoy@port.ac.uk>
-Date: Mon, 1 Jul 2024 23:47:38 +0100
+Date: Thu, 3 Jul 2025 08:49:00 +0100
 Subject: [PATCH] remove lalsuite for conda
 
 ---
@@ -8,17 +8,17 @@ Subject: [PATCH] remove lalsuite for conda
  1 file changed, 1 deletion(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index 9c790bed..a6282c09 100644
+index 0b388ce6..f6e6898c 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -29,7 +29,6 @@ dependencies = [
  	"deepdish",
- 	"gwpy >=2.1.2",
+ 	"gwpy >=3.0.11",
  	"h5py",
 -	"lalsuite >7.11",
+         "python-ligo-lw <2.0.0",
  	"ligo-gracedb",
- 	"matplotlib<3.8.0",
- 	"numpy >=1.15.4",
+ 	"matplotlib >= 3.6.0,<3.10.0",
 -- 
-2.37.0 (Apple Git-136)
+2.39.3 (Apple Git-146)
 
