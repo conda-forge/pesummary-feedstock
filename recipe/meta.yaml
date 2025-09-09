@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 
 {% set python_min = "3.10" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8d089c218041ed80c39f2c8dc00b9c117eca13bf47ef95c7f8148ca10357628c
+  sha256: 3af8d41e4d0a7777adf25326a4a79bd87bea9effdd6e1e749a5721403676ae1a
   patches:
     - 0001-Remove-unneeded-requirements.patch
 
@@ -37,7 +37,7 @@ build:
     - summarytgr = pesummary.cli.summarytgr:main
     - summaryversion = pesummary.cli.summaryversion:main
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
