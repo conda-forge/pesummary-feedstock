@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "1.5.3" %}
+{% set version = "1.5.4" %}
 
 {% set python_min = "3.10" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 924f88dc0b9fcd51ae69b735b05f9f0df5c7208dd0df8205f01dc3c8a3f8d3f2
+  sha256: 47e3fd5585e8a002d6be1ead772e21142343ed6345c8db3a77b60fd798abf801
   patches:
     - 0001-Remove-unneeded-requirements.patch
 
