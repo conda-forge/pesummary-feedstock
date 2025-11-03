@@ -1,14 +1,14 @@
-From d61dc68ed1a3736fd8d3760ef3df97cac56b02be Mon Sep 17 00:00:00 2001
+From 5f49a66eafacb8b27a2592f2dececf0dcbf07ee3 Mon Sep 17 00:00:00 2001
 From: Charlie Hoy <charlie.hoy@port.ac.uk>
-Date: Tue, 16 Sep 2025 09:18:56 +0100
+Date: Mon, 3 Nov 2025 16:49:10 +0000
 Subject: [PATCH] update unneeded-requirements.patch
 
 ---
- pyproject.toml | 2 --
- 1 file changed, 2 deletions(-)
+ pyproject.toml | 1 -
+ 1 file changed, 1 deletion(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index 9cb1e716..ece08a24 100644
+index 8a4aa5cb..941c1f33 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -28,7 +28,6 @@ dependencies = [
@@ -19,14 +19,6 @@ index 9cb1e716..ece08a24 100644
          "python-ligo-lw <2.0.0",
  	"ligo-gracedb",
  	"matplotlib >= 3.6.0,<3.10.0",
-@@ -40,7 +39,6 @@ dependencies = [
- 	"seaborn>=0.12.2,<0.13.0",
- 	"statsmodels",
- 	"scipy >=1.8.0",
--	"tables",
- 	"tqdm >=4.44.0",
- ]
- dynamic = ['version']
 -- 
-2.39.3 (Apple Git-146)
+2.50.1 (Apple Git-155)
 
