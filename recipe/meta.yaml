@@ -37,7 +37,7 @@ build:
     - summarytgr = pesummary.cli.summarytgr:main
     - summaryversion = pesummary.cli.summaryversion:main
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -67,15 +67,26 @@ requirements:
     - tqdm >=4.44.0
   run_constrained:
     - bilby >=1.1.1
+    - seaborn-base >=0.12.2,<0.13.0a0
 
 test:
   requires:
-    - nbformat
     - pip
     - python {{ python_min }}
+    # pesummary's extra test requirements
+    # (these should be left unconstrainted to ensure that the above metadata
+    #  does the job of constraining them appropriately)
+    - bilby
+    - coloredlogs
+    - gitpython
+    - gwosc
+    - ligo.skymap
+    - nbformat
+    - pycbc
+    - seaborn-base
   commands:
     # check requirements
-    - python -m pip check pesummary
+    - python -m pip check
     - python -m pip show pesummary
     # run basic sanity checks
     - summarytest --type imports
