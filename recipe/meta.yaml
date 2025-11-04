@@ -64,8 +64,6 @@ requirements:
     - python-lalsimulation >=5.0.0
     - python-lalinference
     - scipy >=1.8.0
-    - seaborn >=0.12.2,<0.13.0
-    - statsmodels
     - tqdm >=4.44.0
   run_constrained:
     - bilby >=1.1.1
