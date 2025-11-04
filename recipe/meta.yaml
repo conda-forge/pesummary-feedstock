@@ -1,5 +1,5 @@
 {% set name = "pesummary" %}
-{% set version = "1.5.3" %}
+{% set version = "1.5.5" %}
 
 {% set python_min = "3.10" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 924f88dc0b9fcd51ae69b735b05f9f0df5c7208dd0df8205f01dc3c8a3f8d3f2
+  sha256: 72db1d0d2461997f34c85e815b21ef560cfc386aa86e3ff6569e7fe7c60fee61
   patches:
     - 0001-Remove-unneeded-requirements.patch
 
@@ -64,8 +64,6 @@ requirements:
     - python-lalsimulation >=5.0.0
     - python-lalinference
     - scipy >=1.8.0
-    - seaborn >=0.12.2,<0.13.0
-    - statsmodels
     - tqdm >=4.44.0
   run_constrained:
     - bilby >=1.1.1
