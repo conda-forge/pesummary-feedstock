@@ -55,8 +55,7 @@ requirements:
     - h5py
     - python-ligo-lw <2.0.0
     - ligo-gracedb
-    - ligo.em-bright >=1.1.5
-    - matplotlib-base >=3.6.0,<3.10.0
+    - matplotlib-base >=3.10.0
     - numpy >=1.15.4
     - pandas
     - plotly
@@ -69,6 +68,7 @@ requirements:
     - tqdm >=4.44.0
   run_constraints:
     - bilby >=1.1.1
+    - ligo.em-bright >=1.1.5
     - seaborn-base >=0.13.0
 
 tests:
@@ -78,6 +78,7 @@ tests:
         - coloredlogs
         - gitpython
         - gwosc
+        - ligo.em-bright
         - ligo.skymap
         - nbformat
         - pip
