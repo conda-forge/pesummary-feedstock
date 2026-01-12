@@ -56,7 +56,7 @@ requirements:
     - python-ligo-lw <2.0.0
     - ligo-gracedb
     - matplotlib-base >=3.10.0
-    - numpy >=1.15.4
+    - numpy >=1.15.4,<2.4.0
     - pandas
     - plotly
     - pygments
