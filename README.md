@@ -14,7 +14,6 @@ Documentation: https://lscsoft.docs.ligo.org/pesummary/
 This package helps the user to generate summary webpages to
 visualise the output from any parameter estimation code
 
-
 Current build status
 ====================
 
