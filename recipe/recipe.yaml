@@ -64,7 +64,7 @@ requirements:
     - python-lal
     - python-lalsimulation >=5.0.0
     - python-lalinference
-    - scipy >=1.8.0
+    - scipy >=1.8.0,<1.17.0
     - tqdm >=4.44.0
   run_constraints:
     - bilby >=1.1.1
