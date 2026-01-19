@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pesummary
-  version: 1.6.0
+  version: "1.6.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 7a817eeff9d3a34d62adc49a2a277287a9d86c036ae456101ac8551d93914e2f
+  sha256: 5fa6322a077a7d516bc1a038487053af7d00f23445f3a20587b75dde0da34c5b
   patches:
     - 0001-Remove-unneeded-requirements.patch
 
@@ -64,7 +64,7 @@ requirements:
     - python-lal
     - python-lalsimulation >=5.0.0
     - python-lalinference
-    - scipy >=1.8.0
+    - scipy >=1.8.0,<1.17.0
     - tqdm >=4.44.0
   run_constraints:
     - bilby >=1.1.1
