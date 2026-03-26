@@ -13,10 +13,12 @@ source:
   sha256: 5fa6322a077a7d516bc1a038487053af7d00f23445f3a20587b75dde0da34c5b
   patches:
     - 0001-Remove-unneeded-requirements.patch
+    # https://git.ligo.org/lscsoft/pesummary/-/merge_requests/861
+    - 0002-Revert-Merge-branch-scipy_pin-into-master.patch
 
 build:
   noarch: python
-  number: 1
+  number: 2
   python:
     entry_points:
       - summaryclassification = pesummary.cli.summaryclassification:main
@@ -64,7 +66,7 @@ requirements:
     - python-lal
     - python-lalsimulation >=5.0.0
     - python-lalinference
-    - scipy >=1.8.0,<1.17.0
+    - scipy >=1.8.0
     - tqdm >=4.44.0
   run_constraints:
     - bilby >=1.1.1
