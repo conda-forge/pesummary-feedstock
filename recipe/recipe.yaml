@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pesummary
-  version: "1.6.1"
+  version: "1.6.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 5fa6322a077a7d516bc1a038487053af7d00f23445f3a20587b75dde0da34c5b
+  sha256: 031610a485bcb0e9c6b587a4b2cae4e2e6d1ffb7ce92c5f9c1a42c6e12a01dda
   patches:
     - 0001-Remove-unneeded-requirements.patch
     # https://git.ligo.org/lscsoft/pesummary/-/merge_requests/861
@@ -18,7 +18,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 0
   python:
     entry_points:
       - summaryclassification = pesummary.cli.summaryclassification:main
