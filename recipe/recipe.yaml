@@ -13,8 +13,6 @@ source:
   sha256: 031610a485bcb0e9c6b587a4b2cae4e2e6d1ffb7ce92c5f9c1a42c6e12a01dda
   patches:
     - 0001-Remove-unneeded-requirements.patch
-    # https://git.ligo.org/lscsoft/pesummary/-/merge_requests/861
-    - 0002-Revert-Merge-branch-scipy_pin-into-master.patch
 
 build:
   noarch: python
