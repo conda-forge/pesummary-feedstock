@@ -1,6 +1,6 @@
-From 5f49a66eafacb8b27a2592f2dececf0dcbf07ee3 Mon Sep 17 00:00:00 2001
+From 6fff15f12cd2cc613456f30e40d0b3684138a609 Mon Sep 17 00:00:00 2001
 From: Charlie Hoy <charlie.hoy@port.ac.uk>
-Date: Mon, 3 Nov 2025 16:49:10 +0000
+Date: Wed, 1 Apr 2026 01:30:37 +0100
 Subject: [PATCH] update unneeded-requirements.patch
 
 ---
@@ -8,7 +8,7 @@ Subject: [PATCH] update unneeded-requirements.patch
  1 file changed, 1 deletion(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index 8a4aa5cb..941c1f33 100644
+index b22c74c9..939c9304 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -28,7 +28,6 @@ dependencies = [
@@ -16,9 +16,9 @@ index 8a4aa5cb..941c1f33 100644
  	"gwpy >=3.0.11",
  	"h5py",
 -	"lalsuite >7.11",
-         "python-ligo-lw <2.0.0",
  	"ligo-gracedb",
- 	"matplotlib >= 3.6.0,<3.10.0",
+ 	"matplotlib >= 3.10.0",
+ 	"numpy >=1.15.4,<2.4.0", # 2.4.0 incompatible with astropy
 -- 
 2.50.1 (Apple Git-155)
 
