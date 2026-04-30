@@ -50,7 +50,7 @@ requirements:
     - setuptools_scm
   run:
     - astropy-base >=5.0
-    - corner
+    - corner >=2.2.1
     - gwpy >=3.0.11
     - h5py
     - python-ligo-lw <2.0.0
