@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pesummary
-  version: "1.6.2"
+  version: "1.6.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 031610a485bcb0e9c6b587a4b2cae4e2e6d1ffb7ce92c5f9c1a42c6e12a01dda
+  sha256: ae370da4185b6dddafdb8833e23660a7cf98b09e88f659d9f126f0fee3079573
   patches:
     - 0001-Remove-unneeded-requirements.patch
 
@@ -50,7 +50,7 @@ requirements:
     - setuptools_scm
   run:
     - astropy-base >=5.0
-    - corner
+    - corner >=2.2.1
     - gwpy >=3.0.11
     - h5py
     - python-ligo-lw <2.0.0
