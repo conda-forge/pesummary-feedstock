@@ -55,7 +55,7 @@ requirements:
     - h5py
     - python-ligo-lw <2.0.0
     - ligo-gracedb
-    - matplotlib-base >=3.10.0
+    - matplotlib-base >=3.10.0,<3.11.0
     - numpy >=1.15.4,<2.4.0
     - pandas
     - plotly
