@@ -16,7 +16,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   python:
     entry_points:
       - summaryclassification = pesummary.cli.summaryclassification:main
