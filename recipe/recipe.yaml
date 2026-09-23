@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pesummary
-  version: "1.7.0"
+  version: "1.8.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 6aebed27a9f97ec43a6cdd9eb266b0153fa515685bc0df30053886a68bb40dbd
+  sha256: fbb749e4041491e8e5abf2b5155e17ebb90177328ab054ab78d9012ed0cea83b
   patches:
     - 0001-Remove-unneeded-requirements.patch
 
